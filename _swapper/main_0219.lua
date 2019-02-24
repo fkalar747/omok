@@ -12,56 +12,45 @@ end
 --^ forin .
 --> require("{{ erb -xf -rei |global.+\.lua| -sep |.| }}") 
 require("globals")
-require("global.dcode")
-require("global.dtag")
-require("global.dprint")
+require("global_debug")
 --$
 
 
 local module_rbp_s = {		
 	--^ forin .
 	--> "{{ erb -xf -rei |.+\.lua| -xrei &(main.+)|(config.+)|(global.+)& -sep |.| }}"  {{ nl |,| }}
-	"g__debug._pre"  ,
-	"g__debug._post"  ,
-	"g__debug.fakeTouch"  ,
 	"cb__models.user._pre"  ,
-	"cb__models.stoneGroups._pre"  ,
-	"b__views.d__buttons._init"  ,
-	"b__views.c__bars.common"  ,
+	"cb__models.pan.t2"  ,
+	"cb__models.pan.t3"  ,
+	"cb__models._post"  ,
+	"g__debug._pre"  ,
+	"g__debug.fakeTouch"  ,
+	"f__inputs.modals._pre"  ,
+	"f__inputs.multitouchPlanes"  ,
+	"e__network.a__receiver"  ,
+	"e__network.b__requester"  ,
+	"a__dimensions._pre"  ,
+	"d__actions.modals._pre"  ,
+	"d__actions.modals._post"  ,
+	"d__actions.pan.a__manageAlpha._pre"  ,
+	"d__actions.pan.b__t2.setScalePos"  ,
+	"b__views.b__multitouchPlanes._pre"  ,
 	"b__views.c__bars.t2"  ,
 	"b__views.c__bars.t3"  ,
 	"b__views.c__bars._init"  ,
+	"b__views.c__bars.common"  ,
 	"b__views.e__modals.account"  ,
-	"b__views.e__modals.store"  ,
 	"b__views.e__modals.record"  ,
 	"b__views.e__modals._pre"  ,
-	"b__views.b__multitouchPlanes._pre"  ,
-	"b__views.a__pan._pre"  ,
-	"b__views.a__pan._post"  ,
-	"b__views.a__pan.t3._pre"  ,
-	"b__views.a__pan.t3.woodenBoard"  ,
-	"b__views.a__pan.t3._post"  ,
-	"b__views.a__pan.t3.stoneGroups._pre"  ,
-	"b__views.a__pan.t3.stoneGroups._post"  ,
-	"b__views.a__pan.t3.stoneGroups.stones"  ,
-	"b__views.a__pan.t2.colorSquares"  ,
-	"b__views.a__pan.t2._pre"  ,
-	"b__views.a__pan.t2._post"  ,
+	"b__views.e__modals.store"  ,
 	"b__views.a__pan.t2.steelFrameBoard"  ,
-	"ca__mvSyncers.stoneGroups"  ,
-	"f__inputs.multitouchPlanes"  ,
-	"f__inputs.modals._pre"  ,
-	"d__actions.modals._pre"  ,
-	"d__actions.modals._post"  ,
-	"d__actions.scalePosSettable"  ,
-	"d__actions.pan.t3.putStone"  ,
-	"d__actions.pan.t2.setFocus"  ,
-	"d__actions.pan.t2.updateFocus"  ,
-	"d__actions._post"  ,
-	"d__actions.alphaChanger"  ,
-	"a__dimensions._pre"  ,
-	"e__network.b__requester"  ,
-	"e__network.a__receiver"  
+	"b__views.a__pan.t2.colorSquares"  ,
+	"b__views.a__pan.t2._post"  ,
+	"b__views.a__pan.t3.stoneGroup"  ,
+	"b__views.a__pan.t3._post"  ,
+	"b__views.a__pan.t3.woodenBoard"  ,
+	"b__views.a__pan._pre"  ,
+	"b__views.d__buttons._init"  
 	--$
 }
 

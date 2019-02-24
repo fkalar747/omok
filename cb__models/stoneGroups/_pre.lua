@@ -51,7 +51,7 @@ return function(p,o,c)
 					self.records[i].dobj:removeSelf()
 				end
 
-				self.records[i] = packet.records[i]
+				self.records[i] = copy(packet.records[i])
 				self.records[i].dobj = self.dobj:put(self.records[i])
 
 			end
@@ -63,6 +63,11 @@ return function(p,o,c)
 			self.RN = packet.RN 
 			self.unconfirmedStart = #packet.records
 
+			self.stoneGroupMVSyncer:sync()
+		end
+
+		function model:put(record)
+			table.insert(self.records,record)
 			self.stoneGroupMVSyncer:sync()
 		end
 	end

@@ -5,7 +5,7 @@ return function (parent,o)
 	local dimensions = modular_get(parent_module,"dimensions")
 
 	local panBoardPlane = display.newGroup()
-	o.disobj = panBoardPlane
+	o.dobj = panBoardPlane
 
 	for i0 = 1,2 do
 		local gapX = (i0%2)*dimensions.panPlaceSize

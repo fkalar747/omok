@@ -5,7 +5,7 @@ return function (parent,o,call_stack)
 	local dimensions = modular_get(parent,"dimensions")
 
 	local board = display.newGroup()
-	o.disobj = board
+	o.dobj = board
 
 
 	local interval = dimensions.kanSize

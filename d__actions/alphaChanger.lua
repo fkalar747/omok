@@ -3,21 +3,21 @@ return function (p,o,c)
 	
 	local alphaChangers = {
 		{
-			target = modular_ros("views.pan.t2.steelFrameBoard").disobj,
+			target = modular_ros("views.pan.t2.steelFrameBoard").dobj,
 			range = {
 				thresh1=0.2,
 				thresh2=1.2,
 				pos = false
 			}
 		},{
-			target = modular_ros("views.pan.t2.colorSquares").disobj,
+			target = modular_ros("views.pan.t2.colorSquares").dobj,
 			range = {
 				thresh1=0.2,
 				thresh2=1.5,
 				pos = false
 			}
 		},{
-			target = modular_ros("views.pan.t3.woodenBoard").disobj,
+			target = modular_ros("views.pan.t3.woodenBoard").dobj,
 			range = {
 				thresh1=0.7,
 				thresh2=1,
@@ -49,7 +49,7 @@ return function (p,o,c)
 	}
 
 	local function manageAlpha(iobj)
-		local scale = iobj.disobj.xScale
+		local scale = iobj.dobj.xScale
 
 		--print(" dcode - g902hn0gf : scale " .. scale)
 

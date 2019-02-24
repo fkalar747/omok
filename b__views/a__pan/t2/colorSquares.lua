@@ -4,7 +4,7 @@ return function (parent,o)
 	local dimensions = modular_ros("dimensions")
 
 	local group = display.newGroup()
-	o.disobj = group
+	o.dobj = group
 
 	local defaultColor = {0.3,0.3,0.5}
 

@@ -2,18 +2,18 @@ return function(pre,calldepth)
 	-- body
 	local dimensions = modular_get(pre,"dimensions")
 
-	local disobj = display.newGroup()
-	pre.disobj = disobj
+	local dobj = display.newGroup()
+	pre.dobj = dobj
 
 	for k,v in pairs(pre.__child_s) do 
 
-		disobj:insert(v.disobj)
+		dobj:insert(v.dobj)
 
 	end
 
-	disobj.x = dimensions.CX
-	disobj.y = dimensions.CY
-	disobj.__dcode = "gydn323nso"
+	dobj.x = dimensions.CX
+	dobj.y = dimensions.CY
+	dobj.__dcode = "gydn323nso"
 
 
 
@@ -21,7 +21,7 @@ return function(pre,calldepth)
 	pre.globalXYToColUbRowInT2 = function(x,y)
 		-- body
 		
-		x,y = disobj:contentToLocal(x,y)
+		x,y = dobj:contentToLocal(x,y)
 		local col = math.floor((x+panPlaceSize/2)/panPlaceSize) + 6
 		local row = math.floor((y+panPlaceSize/2)/panPlaceSize) + 6
 

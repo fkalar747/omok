@@ -52,7 +52,7 @@ return function(p,o,c)
 					self.records[i].dobj:removeSelf()
 				end
 
-				self.records[i] = model.records[i]
+				self.records[i] = copy(model.records[i])
 				self.records[i].dobj = self.dobj:put(self.records[i])
 
 			end

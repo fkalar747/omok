@@ -5,23 +5,23 @@ return function(p,o,c)
 
 
 
-	local function make_interfaceObj(disobj)
+	local function make_interfaceObj(dobj)
 		
 		local pivotScale = nil
 		local pivotX = nil
 		local pivotY = nil
 
 		local function pivot(iobj,x,y)
-			pivotScale = disobj.xScale
-			pivotX,pivotY = disobj:contentToLocal(x,y) 
+			pivotScale = dobj.xScale
+			pivotX,pivotY = dobj:contentToLocal(x,y) 
 		end
 
 		local function update(iobj,avgX,avgY,multiplier)
 				
-			disobj.x =  avgX - pivotX*disobj.xScale 
-			disobj.y =  avgY - pivotY*disobj.yScale 
-			disobj.xScale = pivotScale * multiplier
-			disobj.yScale = pivotScale * multiplier
+			dobj.x =  avgX - pivotX*dobj.xScale 
+			dobj.y =  avgY - pivotY*dobj.yScale 
+			dobj.xScale = pivotScale * multiplier
+			dobj.yScale = pivotScale * multiplier
 
 			if iobj.updateListener then 
 				--print(" dcode - 9g39ofg : multiplier " .. multiplier )
@@ -30,13 +30,13 @@ return function(p,o,c)
 		end
 
 		local interfaceObj = {}
-		interfaceObj.disobj = disobj
+		interfaceObj.dobj = dobj
 		interfaceObj.pivot =  pivot
 		interfaceObj.update =  update
 
 		return interfaceObj
 	end
 
-	o.t2 = make_interfaceObj(view_t2.disobj)
+	o.t2 = make_interfaceObj(view_t2.dobj)
 
 end

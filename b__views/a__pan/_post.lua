@@ -1,9 +1,9 @@
 return function(p)
 
 
-	local t2 = modular_ros("views.pan.t2").disobj
+	local t2 = modular_ros("views.pan.t2").dobj
 	
-	local woodenBoard = modular_ros("views.pan.t3.woodenBoard").disobj
+	local woodenBoard = modular_ros("views.pan.t3.woodenBoard").dobj
 	local stoneGroupLib = modular_ros("views.pan.t3.stoneGroups").lib
 
 	t2:insert(woodenBoard)
