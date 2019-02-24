@@ -1,0 +1,8 @@
+
+
+
+0222
+	
+	putstone : iobj -> model -> mv_update -> view 구현하기 
+
+		miobj 만들기 
